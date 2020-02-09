@@ -1,13 +1,13 @@
 package stubs;
 import org.apache.hadoop.mapreduce.Job;
-import org.apache.hadoop.util.Configured;
-import org.apache.hadoop.util.Configuration;
+import org.apache.hadoop.conf.Configured;
+import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.util.Tool;
 import org.apache.hadoop.util.ToolRunner;
 
 public class AvgWordLength extends Configured implements Tool {
 
-  public static void main(String[] args) throws exception {
+  public static void main(String[] args) throws Exception {
 	int exitCode = ToolRunner.run(new Configuration(), new AvgWordLength(), args);
 	System.exit(exitCode);
   }
@@ -46,7 +46,7 @@ public class AvgWordLength extends Configured implements Tool {
      * If it finishes successfully, return 0. If not, return 1.
      */
     boolean success = job.waitForCompletion(true);
-    System.exit(success ? 0 : 1);
+    return(success ? 0 : 1);
   }
 }
 
