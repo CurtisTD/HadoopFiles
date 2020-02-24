@@ -38,7 +38,6 @@ public class LogMonthMapper extends Mapper<LongWritable, Text, Text, Text> {
 		  //For lines that do not match, skip
 	  }
 	  
-	  /* Done */
-	  
+	  /* Done */	  
   }
 }
