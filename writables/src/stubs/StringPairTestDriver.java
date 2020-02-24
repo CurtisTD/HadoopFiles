@@ -35,20 +35,22 @@ public class StringPairTestDriver extends Configured implements Tool {
      * A LongWritable.  It works with any key and value type, therefore
      * supports the new StringPairWritable as a key type.
      */
+    //Set to longSumReducer
     job.setReducerClass(LongSumReducer.class);
-
+    //String pair for mapper
     job.setMapperClass(StringPairMapper.class);
     
     /*
 	 * Set the key output class for the job
-	 */   
+	 */
+	//Set to StringPairWritable for keys   
     job.setOutputKeyClass(StringPairWritable.class);
     
     /*
      * Set the value output class for the job
      */
+    //Set Long Writable for the output values
     job.setOutputValueClass(LongWritable.class);
-
 
     boolean success = job.waitForCompletion(true);
     return success ? 0 : 1;
