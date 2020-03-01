@@ -1,2 +1,2 @@
 # HadoopFiles
-Hadoop &amp; Big Data, USF Spring 2020
+Hadoop &amp; Big Data - USF Spring 2020
